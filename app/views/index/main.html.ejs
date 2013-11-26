@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= include ../head.html.ejs %>
+	</head>
+
+	<body>
+
+		<!-- Alert -->
+	  <% if (message.success) { %>
+      <div class="alert alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	  		<strong>Hi there!</strong> Welcome back, we've missed you
+      </div>
+    <% } %>
+
+		<!-- Navigation -->
+		<div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+          <ul class="nav navbar-nav">
+            <li><a href="404" class="active" data-bypass="true">404</a></li>
+          </ul>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <% if (typeof user !== "undefined") { %>
+            	<span><strong>Welkom</strong>, <a href="account" data-bypass="true"><%= user.displayName %></a></span> 
+            	<a href="logout" class="btn btn-danger" data-bypass="true">Sign out</a>
+            <% } else {%>
+            	<a href="login" class="btn btn-success" data-bypass="true">Sign in</a>
+            <% } %>
+          </form>
+        </div>
+      </div>
+    </div>
+
+		<!-- Hero -->
+		<section id="hero">
+			<div class="jumbotron">
+				<div class="container">
+					<div class="col-md-7">
+						<h1>Hello, world!</h1>
+						<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+						<p><a class="btn btn-primary" role="button">Create a project »</a></p>
+					</div>
+					<div class="col-md-5">
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="wide">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<img src="images/pres.png" />
+					</div>
+					<div class="col-md-7 col-md-offset-1">
+						<h2>Specifications</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ipsum felis, ultrices a turpis quis, euismod posuere nisi. Proin et vestibulum dui, in ultrices tellus. </p>
+							</div>
+							<div class="col-md-6">
+								<p>Maecenas neque libero, ultrices nec metus eu, pharetra lacinia est. Fusce massa urna, cursus quis porttitor faucibus, aliquet ut ipsum.</p>
+							</div>
+						</div>
+							<p>
+							<a class="btn btn-primary" href="tweets" data-bypass="true" role="button">View details »</a>
+						</p>
+					</div>
+				</div>
+				<hr />
+			</div>
+		</section>
+
+		<!-- Selling -->
+		<section>
+			<div class="container">
+	      <div class="row">
+	        <div class="col-md-4">
+	          <h2>Activities <i class="fa fa-check-circle success"></i></h2>
+	          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus.</p>
+	          <p>
+	          	<div id="graph" style="height:100px;"></div>
+	          </p>
+	          <p><a class="btn btn-default" href="activities" data-bypass="true" role="button">View details »</a></p>
+	        </div>
+	        <div class="col-md-4">
+	          <h2>Heading</h2>
+	          <p>Donec id elit non mi porta gravida at eget metus usce dapibus dui. </p>
+	          <p>
+	          	<div id="pie" style="height:100px;"></div>
+	          </p>
+	          <p><a class="btn btn-default" href="map" data-bypass="true" role="button">View details »</a></p>
+	       </div>
+	        <div class="col-md-4">
+	          <h2>#nodejs</h2>
+	          <p>Donec id elit non mi porta gravida at eget metus. Porta graviet wello.</p>
+	          <p>
+	          	<div id="lines" style="height:100px;"></div>
+	          </p>
+	          <p><a class="btn btn-default" href="tweets" data-bypass="true" role="button">View details »</a></p>
+	        </div>
+	      </div>
+	      <hr />
+	    </div>
+		</section>
+
+
+		<section class="wide">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<h2>Specifications</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ipsum felis, ultrices a turpis quis, euismod posuere nisi. Proin et vestibulum dui, in ultrices tellus. </p>
+							</div>
+							<div class="col-md-6">
+								<p>Maecenas neque libero, ultrices nec metus eu, pharetra lacinia est. Fusce massa urna, cursus quis porttitor faucibus, aliquet ut ipsum.</p>
+							</div>
+						</div>
+						<p>
+							<a class="btn btn-primary" href="tweets" data-bypass="true" role="button">View details »</a>
+						</p>
+					</div>
+					<div class="col-md-4 col-md-offset-1">
+						<img src="images/browser.png" />
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+		<!-- Sponsoring -->
+		<section>
+			<div class="container">
+				<hr />
+				<div class="row">
+					<div class="col-md-12">
+						<h2></h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2 grayscale">
+						<a href="http://utrecht.startupweekend.org" data-bypass="true"><img src="http://utrecht.startupweekend.org/files/2013/11/GU_logo_ZW.jpg" width="120" /></a>
+					</div>
+					<div class="col-md-2 grayscale">
+						<center>
+							<a href="http://utrecht.startupweekend.org" data-bypass="true"><img src="http://www.uu.nl/SiteCollectionImages/Corp_UU%20en%20Nieuws/Hot%20items/Logo%20Utrecht%20Science%20park.jpg" width="120" /></a>
+						</center>
+					</div>
+					<div class="col-md-2 grayscale">
+						<center>
+							<a href="http://utrecht.startupweekend.org" data-bypass="true"><img src="http://www.uu.nl/SiteCollectionImages/middenkolom/Universiteitsfonds/Utrecht%20Inc_logo_klein%20(2).jpg" width="120" /></a>
+						</center>
+					</div>
+					<div class="col-md-2 grayscale">
+						<center>
+							<a href="http://utrecht.startupweekend.org" data-bypass="true"><img src="http://f.cl.ly/items/1J3R1I0U3e2x070r1n2U/GSB_2013_Logo_Black_RGB%20(1).png" width="120" /></a>
+						</center>
+					</div>
+					<div class="col-md-2 grayscale">
+						<center>
+							<a href="http://utrecht.startupweekend.org" data-bypass="true"><img src="http://startupweekend.org/wp-content/blogs.dir/1/files/2013/04/BizSpark_bLk2.jpg" width="120" /></a>
+						</center>
+					</div>
+					<div class="col-md-2 grayscale">
+						<center>
+							<a href="http://utrecht.startupweekend.org" data-bypass="true"><img src="http://startupweekend.org/wp-content/blogs.dir/1/files/2012/08/Primary-GforE.png" width="120" /></a>
+						</center>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="footer">
+			<%= include ../footer.html.ejs %>
+		</section>
+	</body>
+</html>

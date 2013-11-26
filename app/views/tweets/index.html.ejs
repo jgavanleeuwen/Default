@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= include ../head.html.ejs %>
+  </head>
+
+  <body>
+
+    <!-- Hero -->
+    <section id="hero">
+      <div class="jumbotron">
+        <div class="container">
+          <div class="col-md-7">
+            <h1>Tweets</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table -->
+  	<section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-striped">
+              <thead>
+                <tr><td>Date</td><td>Name</td><td>Location</td><td>Tweet</td></tr>
+              </thead>
+              <tbody>
+              <% for(var i = 0; i < output.length; i++) {%>
+                <tr>
+                  <td><%= output[i].created_at %></td>
+                  <td><%= output[i].user.screen_name %></td>
+                  <td><%= output[i].user.location %></td>
+                  <td><%= output[i].text %></td>
+                </tr>
+              <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  </body>
+</html>
