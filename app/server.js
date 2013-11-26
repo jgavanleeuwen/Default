@@ -4,7 +4,7 @@ var	env = process.env.NODE_ENV || 'development';
 var	port = process.env.PORT || 3000;
 var	address = '0.0.0.0';
 
-locomotive.boot(__dirname, env, function(err, server) {
+locomotive.boot('./', env, function(err, server) {
 	if (err) { 
 		throw err; 
 	}
