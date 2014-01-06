@@ -17,7 +17,6 @@ describe('Tweets', function() {
       	res.text.should.not.contain('404');
       	done();
     	});
-
 	});
 	it("GET /tweets.json should return JSON", function(done) {
 		request
